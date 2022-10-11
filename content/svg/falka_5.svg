@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 248">
+  <defs>
+    <style>
+      .a, .b, .c {
+        fill: none;
+      }
+
+      .a, .b {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .a {
+        stroke-linecap: square;
+      }
+    </style>
+  </defs>
+  <title>⁯falka_5</title>
+  <g>
+    <polyline class="a" points="360 160 352 152 352 120 376 144 376 168 368 176 352 176 320 128 296 128 280 112 280 104"/>
+    <polyline class="b" points="224 56 208 72 200 72"/>
+    <polyline class="b" points="216 104 216 108 208 116"/>
+    <line class="a" x1="216" y1="104" x2="216" y2="80"/>
+    <polyline class="a" points="232 128 240 136 240 144"/>
+    <line class="a" x1="224" y1="120" x2="232" y2="128"/>
+    <polyline class="a" points="224 176 232 176 232 152"/>
+    <polyline class="a" points="248 176 256 176 256 136 268 124"/>
+    <polyline class="a" points="320 152 336 176 296 176"/>
+    <polyline class="a" points="288 136 288 144 304 160"/>
+    <polyline class="a" points="216 48 248 48 264 32 264 48 288 64 288 72 304 88 304 96 288 96 264 72 256 72"/>
+    <line class="a" x1="272" y1="176" x2="280" y2="176"/>
+    <line class="a" x1="268" y1="148" x2="284" y2="164"/>
+    <polyline class="b" points="232 96 232 72 240 64"/>
+    <polyline class="a" points="248 120 264 104 264 92"/>
+    <polyline class="a" points="248 80 248 96 236 108"/>
+    <polyline class="a" points="128 104 160 104 176 88 176 104 200 120 200 128 216 144 216 144 216 152 200 152 176 128 168 128"/>
+    <polyline class="b" points="136 112 112 136 104 136"/>
+    <polyline class="a" points="32 216 40 208 40 176 16 200 16 224 24 232 40 232 72 184 96 184 120 160 120 144"/>
+    <polyline class="b" points="176 160 176 164 184 172"/>
+    <line class="a" x1="176" y1="160" x2="176" y2="144"/>
+    <polyline class="a" points="160 184 152 192 152 200"/>
+    <line class="a" x1="168" y1="176" x2="160" y2="184"/>
+    <polyline class="a" points="168 232 160 232 160 208"/>
+    <polyline class="a" points="144 232 136 232 136 192 124 180"/>
+    <polyline class="a" points="72 208 56 232 96 232"/>
+    <polyline class="a" points="104 192 104 200 88 216"/>
+    <line class="a" x1="120" y1="232" x2="112" y2="232"/>
+    <line class="a" x1="124" y1="204" x2="108" y2="220"/>
+    <polyline class="a" points="144 176 160 160 160 136"/>
+    <polyline class="a" points="136 136 152 120 160 120"/>
+    <polyline class="a" points="132 164 144 152 144 144"/>
+    <polyline class="b" points="384 184 392 184 392 128 384 104 384 96"/>
+    <polyline class="a" points="424 64 408 88 392 88 376 64"/>
+    <polyline class="b" points="352 64 360 64 376 48 376 24 392 40 408 40 424 24 424 48 440 64 448 64"/>
+    <polyline class="b" points="416 184 408 184 408 128 416 104 416 96"/>
+    <polyline class="a" points="352 80 368 80 376 88"/>
+    <line class="a" x1="360" y1="96" x2="376" y2="120"/>
+    <polyline class="a" points="448 80 432 80 424 88"/>
+    <line class="b" x1="400" y1="96" x2="400" y2="116"/>
+    <line class="a" x1="440" y1="96" x2="424" y2="120"/>
+    <polyline class="a" points="440 160 448 152 448 120 424 144 424 168 432 176 448 176 480 128 504 128 520 112 520 104"/>
+    <polyline class="b" points="576 56 592 72 600 72"/>
+    <polyline class="b" points="584 104 584 108 592 116"/>
+    <line class="a" x1="584" y1="104" x2="584" y2="80"/>
+    <polyline class="a" points="568 128 560 136 560 144"/>
+    <line class="a" x1="576" y1="120" x2="568" y2="128"/>
+    <polyline class="a" points="576 176 568 176 568 152"/>
+    <polyline class="a" points="552 176 544 176 544 136 532 124"/>
+    <polyline class="a" points="480 152 464 176 504 176"/>
+    <polyline class="a" points="512 136 512 144 496 160"/>
+    <polyline class="a" points="584 48 552 48 536 32 536 48 512 64 512 72 496 88 496 96 512 96 536 72 544 72"/>
+    <line class="a" x1="528" y1="176" x2="520" y2="176"/>
+    <line class="a" x1="532" y1="148" x2="516" y2="164"/>
+    <polyline class="b" points="568 96 568 72 560 64"/>
+    <polyline class="a" points="552 120 536 104 536 92"/>
+    <polyline class="a" points="552 80 552 96 564 108"/>
+    <polyline class="a" points="672 104 640 104 624 88 624 104 600 120 600 128 584 144 584 144 584 152 600 152 624 128 632 128"/>
+    <polyline class="b" points="664 112 688 136 696 136"/>
+    <polyline class="a" points="768 216 760 208 760 176 784 200 784 224 776 232 760 232 728 184 704 184 680 160 680 144"/>
+    <polyline class="b" points="624 160 624 164 616 172"/>
+    <line class="a" x1="624" y1="160" x2="624" y2="144"/>
+    <polyline class="a" points="640 184 648 192 648 200"/>
+    <line class="a" x1="632" y1="176" x2="640" y2="184"/>
+    <polyline class="a" points="632 232 640 232 640 208"/>
+    <polyline class="a" points="656 232 664 232 664 192 676 180"/>
+    <polyline class="a" points="728 208 744 232 704 232"/>
+    <polyline class="a" points="696 192 696 200 712 216"/>
+    <line class="a" x1="680" y1="232" x2="688" y2="232"/>
+    <line class="a" x1="676" y1="204" x2="692" y2="220"/>
+    <polyline class="a" points="656 176 640 160 640 136"/>
+    <polyline class="a" points="664 136 648 120 640 120"/>
+    <polyline class="a" points="668 164 656 152 656 144"/>
+    <rect class="c" width="800" height="248"/>
+  </g>
+</svg>

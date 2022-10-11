@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #212121;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <title>⁯icon_tortenelem</title>
+  <g>
+    <polyline class="a" points="88 192 88 92 80 92"/>
+    <polyline class="a" points="112 192 112 92 104 92"/>
+    <polyline class="a" points="136 188 136 92 128 92"/>
+    <polyline class="a" points="64 188 64 92 56 92"/>
+    <circle class="a" cx="100" cy="100" r="96"/>
+    <polyline class="a" points="40 60 160 60 160 68"/>
+    <polyline class="a" points="48 84 48 76 152 76"/>
+  </g>
+</svg>

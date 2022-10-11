@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 272">
+  <defs>
+    <style>
+      .a, .b {
+        fill: none;
+        stroke: #212121;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .a {
+        stroke-linecap: square;
+      }
+    </style>
+  </defs>
+  <title>⁯fla_logo</title>
+  <g>
+    <polyline class="a" points="76 252 76 228 68 228"/>
+    <polyline class="a" points="196 252 196 228 188 228"/>
+    <polyline class="a" points="172 260 172 228 164 228"/>
+    <polyline class="a" points="148 264 148 228 140 228"/>
+    <polyline class="a" points="124 264 124 228 116 228"/>
+    <polyline class="a" points="100 260 100 228 92 228"/>
+    <polyline class="a" points="52 196 220 196 220 204"/>
+    <polyline class="a" points="60 220 60 212 212 212"/>
+    <polyline class="a" points="204 164 196 156 196 124 220 148 220 172 212 180 196 180 164 132 140 132 124 116 124 108"/>
+    <polyline class="b" points="68 60 52 76 44 76"/>
+    <polyline class="b" points="60 108 60 112 52 120"/>
+    <line class="a" x1="60" y1="108" x2="60" y2="84"/>
+    <polyline class="a" points="76 132 84 140 84 148"/>
+    <line class="a" x1="68" y1="124" x2="76" y2="132"/>
+    <polyline class="a" points="68 180 76 180 76 156"/>
+    <polyline class="a" points="92 180 100 180 100 140 112 128"/>
+    <polyline class="a" points="164 156 180 180 140 180"/>
+    <polyline class="a" points="132 140 132 148 148 164"/>
+    <polyline class="a" points="60 52 92 52 108 36 108 52 132 68 132 76 148 92 148 100 132 100 108 76 100 76"/>
+    <line class="a" x1="116" y1="180" x2="124" y2="180"/>
+    <line class="a" x1="112" y1="152" x2="128" y2="168"/>
+    <circle class="a" cx="136" cy="136" r="132"/>
+    <circle class="a" cx="136" cy="136" r="132"/>
+    <polyline class="b" points="76 100 76 76 84 68"/>
+    <polyline class="a" points="92 124 108 108 108 96"/>
+    <polyline class="a" points="92 84 92 100 80 112"/>
+    <polyline class="b" points="180 76 172 76 164 68"/>
+    <polyline class="b" points="212 76 220 76 228 84"/>
+    <polyline class="b" points="196 60 196 52 204 44"/>
+    <polyline class="b" points="196 92 196 100 188 108"/>
+    <polyline class="b" points="204 68 212 60 224 60"/>
+    <polyline class="b" points="188 84 180 92 168 92"/>
+    <polyline class="b" points="204 84 212 92 212 104"/>
+    <polyline class="b" points="188 68 180 60 180 48"/>
+  </g>
+</svg>

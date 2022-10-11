@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #212121;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <title>⁯icon_trening</title>
+  <g>
+    <circle class="a" cx="100" cy="100" r="96"/>
+    <polyline class="a" points="108 116 100 116 100 76 124 76"/>
+    <polyline class="a" points="116 92 132 92 132 100"/>
+    <polyline class="a" points="84 92 68 92 68 100"/>
+    <polyline class="a" points="116 124 116 132 84 132"/>
+    <line class="a" x1="84" y1="76" x2="68" y2="76"/>
+    <polyline class="a" points="68 140 68 156 132 156"/>
+    <polyline class="a" points="60 68 60 44 132 44"/>
+    <polyline class="a" points="76 60 140 60 140 52"/>
+  </g>
+</svg>

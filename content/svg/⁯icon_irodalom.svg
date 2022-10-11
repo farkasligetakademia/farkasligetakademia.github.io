@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #212121;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <title>⁯icon_irodalom</title>
+  <g>
+    <polyline class="a" points="164 88 164 60 36 60 36 80"/>
+    <polyline class="a" points="156 96 36 96 36 136"/>
+    <line class="a" x1="164" y1="144" x2="44" y2="144"/>
+    <circle class="a" cx="100" cy="100" r="96"/>
+    <line class="a" x1="52" y1="112" x2="156" y2="112"/>
+    <line class="a" x1="52" y1="128" x2="156" y2="128"/>
+  </g>
+</svg>
