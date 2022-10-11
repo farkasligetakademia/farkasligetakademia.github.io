@@ -70,8 +70,7 @@ q {
 
 body {
 /*  background: linear-gradient(var(--color-white), var(--color-sand));*/
-  background-color: red;
-  /*background-color: var(--color-sand);*/
+  background-color: var(--color-sand);
   color: var(--color-black);
   font-family: var(--ff-serif);
   /*overflow-x: hidden;*/
@@ -328,15 +327,13 @@ a:visited {
 }
 
 .fla-hero-bg {
-  background-color: green;
-  /*background: linear-gradient(var(--color-white), var(--color-sand));*/
+  background: linear-gradient(var(--color-white), var(--color-sand));
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   width: 100vw;
   position: fixed;
   top:0;
-  /* z-index usage is up to you.. although there is no need of using it because the default stack context will work. */
   z-index: -1;
 }
 
