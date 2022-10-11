@@ -1,8 +1,8 @@
 // vh
 
-let vh = window.innerHeight * 0.01;
+/*let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty('--vh', `${vh}px`);*/
 
 // Open & Close Navigation
 
@@ -129,15 +129,6 @@ function closeForm() {
   window.history.back();
 }
 
-/*window.addEventListener('popstate', event => {
-  if (event.state?.isModal) {
-    hideMagyar();
-    hideTortenelem();
-    hideTrening();
-    hideForm();
-  }
-});*/
-
 window.onpopstate = function() {
     hideMagyar();
     hideTortenelem();
@@ -152,7 +143,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  speed: 1000,
+  speed: 500,
 
   // If we need pagination
   pagination: {
