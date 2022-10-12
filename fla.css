@@ -260,7 +260,7 @@ a:visited {
 .fla-divider::after, .fla-divider-white::after {
   content: "";
   display: inline-block;
-  height: 0.5rem;
+  height: max(0.3rem, calc(0.10 * var(--spacing)));
   width: 50%;
 }
 
@@ -405,11 +405,12 @@ button {
   fill: var(--color-sand);
 }
 
-.fla-hamburger-icon, .fla-close-icon {
+.fla-hamburger-icon {
   border: 0;
   cursor: pointer;
   fill: none;
   height: max(2.5rem, calc(0.5 * var(--fontsize-heading)));
+  margin: calc(0.5 * var(--spacing));
   stroke: var(--color-black);
   stroke-linecap: square;
   stroke-miterlimit: 10;
@@ -443,31 +444,10 @@ button {
   d:path("M64 120 128 120 128 128");
 }
 
-.fla-close-icon-line-1 {
-  d:path("M118.63 118.63 73.37 73.37");
-}
-
-.fla-close-icon-line-2 {
-  d:path("M118.63 73.37 73.37 118.63 73.37 118.63");
-}
-
-.fla-round-button-bg:hover ~ .fla-close-icon-line-2, .fla-round-button-bg:active ~ .fla-close-icon-line-2 {
-  d:path("M118.63 73.37 73.37 118.63 67.72 112.97");
-}
-
-.fla-hamburger-icon-line-1, .fla-hamburger-icon-line-2, .fla-hamburger-icon-line-3, .fla-close-icon-line-1, .fla-close-icon-line-2 {
+.fla-hamburger-icon-line-1, .fla-hamburger-icon-line-2, .fla-hamburger-icon-line-3 {
   pointer-events: none;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-}
-
-.fla-hamburger-button {
-  margin: calc(0.5 * var(--spacing));
-}
-
-.fla-close-button {
-  float: right;
-  margin: calc(0.5 * var(--spacing));
 }
 
 /* hero, cta, generic */
