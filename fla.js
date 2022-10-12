@@ -28,11 +28,13 @@ const menubutton = document.getElementsByClassName("fla-round-button-bg")[0];
   // Display Header
 
   var myHeader = document.getElementById("fla-header");
-  const h1 = document.querySelector("h1");
-  const herobutton = document.getElementById("fla-hero-button")
-  const column = document.getElementById("column");
-  const heroText = document.getElementById("hero");
-  var headerAppear = hero.offsetHeight + wolf.offsetHeight - header.offsetHeight;
+  var h1 = document.querySelector("h1");
+  var herobutton = document.getElementById("fla-hero-button")
+  var column = document.getElementById("column");
+  var heroText = document.getElementById("hero");
+  var wolfDiv = document.getElementById("wolf");
+  var wolfDivStyle = wolfDiv.currentStyle || window.getComputedStyle(wolfDiv);
+  var headerAppear = wolf.offsetHeight + parseInt(wolfDivStyle.marginTop) - header.offsetHeight;
 
   window.onscroll = function() {
     "use strict";
