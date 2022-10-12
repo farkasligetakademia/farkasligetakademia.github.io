@@ -39,7 +39,7 @@
 <body onload="load">
   <!-- Header & Nav -->
   <nav id="fla-header">
-    <div id="lockup">
+    <!--<button onlcick="backHome()" style="padding: 0; text-align: left;">--><div id="lockup">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 272" style="width: max(3rem, calc(1.25 * var(--spacing))); margin-right: max(0.5rem, calc(0.15rem + 0.25vw));">
         <defs>
           <style>
@@ -93,17 +93,16 @@
           <polyline class="b" points="188 68 180 60 180 48"/>
         </g>
       </svg>
-      <!--<img src="content/svg/fla_logo.svg" alt="Farkasliget Akadémia" loading="eager" style="width: max(3rem, calc(1.25 * var(--spacing))); margin-right: max(0.5rem, calc(0.15rem + 0.25vw));">-->
       <div id="lockup-text">
         <h5 style="line-height: 125%; margin: 0; font-weight: 500;">Farkasliget<br>Akadémia</h5>
         <div style="width: max(4rem, calc(1.5 * var(--spacing))); height: max(0.3rem, calc(0.10 * var(--spacing))); border-top: max(2px, calc(0.05 * var(--spacing))) solid var(--color-black); border-left: max(2px, calc(0.05 * var(--spacing))) solid var(--color-black); margin-top: max(0.25rem, calc(0.15rem + 0.1vw));"></div>
       </div>
-    </div>
+    </div><!--</button>-->
     <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" class="fla-hamburger-icon">
       <circle class="fla-round-button-bg" cx="96" cy="96" r="96"/>
-      <path class="fla-hamburger-icon-line-1"/>
-      <path class="fla-hamburger-icon-line-2"/>
-      <path class="fla-hamburger-icon-line-3"/>
+      <path d="M64 72 128 72 128 72"/>
+      <path d="M128 96 64 96 64 96"/>
+      <path d="M64 120 128 120 128 120"/>
     </svg>
     <div id="flaMenu" class="fla-menu-close">
       <br>
