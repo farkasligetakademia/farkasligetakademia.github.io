@@ -7,6 +7,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);*/
 // Open & Close Navigation
 
 var OPEN = false;
+const html = document.querySelector('html');
 const body = document.querySelector('body');
 const menu = document.getElementById("flaMenu");
 const header = document.querySelector("nav");
@@ -26,6 +27,7 @@ const menubutton = document.getElementsByClassName("fla-round-button-bg")[0];
       menu.classList.remove("fla-menu-close");
       header.classList.add("fla-header-fullscreen");
       menubutton.classList.add("fla-round-button-bg-active");
+      window.history.pushState({ isMenu: true }, 'Menü');
     }
   };
 
@@ -77,7 +79,7 @@ function hideMagyar() {
 function closeMagyar() {
   window.history.back();
   body.classList.remove('noscroll');
-}
+};
 
 function showTortenelem() {
   window.history.pushState({ isModal: true }, 'Történelem');
@@ -94,7 +96,7 @@ function hideTortenelem() {
 function closeTortenelem() {
   window.history.back();
   body.classList.remove('noscroll');
-}
+};
 
 function showTrening() {
   window.history.pushState({ isModal: true }, 'Tréning és tanácsadás');
@@ -111,7 +113,7 @@ function hideTrening() {
 function closeTrening() {
   window.history.back();
   body.classList.remove('noscroll');
-}
+};
 
 function showForm() {
   window.history.pushState({ isModal: true }, 'Jelentkezés');
@@ -127,15 +129,21 @@ function hideForm() {
 
 function closeForm() {
   window.history.back();
-}
+};
 
 window.onpopstate = function() {
+  if(OPEN) {
+    toggleMenu();
+    isMenu = false;
+  }
+  else {
     hideMagyar();
     hideTortenelem();
     hideTrening();
     hideForm();
     isModal = false;
-}
+  }
+};
 
 // Carousel
 
@@ -174,22 +182,22 @@ window.onload = function () {
       lax.addElements("#segitunk", {
         scrollY: {
           opacity: [
-            [75, 500],
+            [200, 600],
             [1, 0],
             {
               easing: 'easeInQuad',
             }
           ],
           scale: [
-            [75, 500],
+            [200, 600],
             [1, 0.75],
             {
               easing: 'easeInQuad',
             }
           ],
           translateY: [
-            [75, 500],
-            [0, 75],
+            [200, 600],
+            [0, "2 * elHeight"],
             {
               easing: 'easeInQuad',
             }
@@ -199,22 +207,22 @@ window.onload = function () {
       lax.addElements("#magasabbra", {
         scrollY: {
           opacity: [
-            [50, 500],
+            [150, 550],
             [1, 0],
             {
               easing: 'easeInQuad',
             }
           ],
           scale: [
-            [50, 500],
+            [150, 550],
             [1, 0.5],
             {
               easing: 'easeInQuad',
             }
           ],
           translateY: [
-            [50, 500],
-            [0, 50],
+            [150, 550],
+            [0, "elHeight"],
             {
               easing: 'easeInQuad',
             }
@@ -224,14 +232,14 @@ window.onload = function () {
       lax.addElements("#emelkedni", {
         scrollY: {
           opacity: [
-            [25, 500],
+            [100, 500],
             [1, 0],
             {
               easing: 'easeInQuad',
             }
           ],
           scale: [
-            [25, 500],
+            [100, 500],
             [1, 0.25],
             {
               easing: 'easeInQuad',
@@ -242,15 +250,22 @@ window.onload = function () {
       lax.addElements(".fla-hero-button", {
         scrollY: {
           opacity: [
-            [0, 500],
+            [0, 400],
             [1, 0],
             {
               easing: 'easeInQuad',
             }
           ],
           scale: [
-            [0, 500],
+            [0, 400],
             [1, 0],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+          translateY: [
+            [0, 500],
+            [0, "-0.25 * elHeight"],
             {
               easing: 'easeInQuad',
             }
@@ -275,4 +290,4 @@ window.onload = function () {
           ],
         }
       })
-    }
+    };
