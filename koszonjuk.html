@@ -30,18 +30,22 @@
 
 </head>
 <body>
-  <main id="tortenelem" class="fla-productpage fla-reveal">
+  <main id="tortenelem" class="fla-productpage">
     <section class="fla-flex-2" style="background-color: transparent;">
       <h2>Köszönjük!</h2>
       <article>
-        <p>Hamarosan felkeresünk a megadott e-mail címen. Addig is fogadj szeretettel <a href="fla_kupon.pdf">egy kupont.</a> Ha ezt kinyomtatva vagy okostelefonon bemutatod, az első alkalmat ajándékba adjuk. Reméljük, mihamarabb találkozunk!</p>
-        <p>Hamarosan felkeresünk a megadott e-mail címen. Addig is, mivel a fun facteket mindenki szereti, összeállítottunk egy válogatást kedvenc tényeinkből, melyek az óráink során is előkerülhetnek — <a style="white-space: nowrap;" href="">ezt itt tudod letölteni.</a> Reméljük mihamarabb találkozunk!</p>
+        <p>Hamarosan felkeresünk a megadott e-mail címen. Addig is <span>fogadj szeretettel <a href="content/fla_kupon.pdf" target="_blank">egy kupont.</a></span> Ha ezt kinyomtatva vagy okostelefonon bemutatod, az első alkalmat ajándékba adjuk. Reméljük, mihamarabb találkozunk!</p>
         <p style="margin-top: var(--spacing);">Üdvözlettel: <i>a Farkasliget Akadémia csapata</i></p>
-        <button onclick="window.location.href='index.html';" class="fla-button" style="margin: var(--spacing); "type="button" name="vissza">Vissza</button>
       </article>
       <article>
 
       </article>
+      <div class="fla-buttons-container">
+        <div>
+          <button onclick="window.location.href='index.html';" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
+        </div>
+        <div></div>
+      </div>
     </section>
   </main>
 <!-- Swiper -->
@@ -62,7 +66,7 @@
   import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
   // Or using unpkg
   // import { annotate } from 'https://unpkg.com/rough-notation?module';
-  const letoltes = document.querySelector('a');
+  const letoltes = document.querySelector('span');
   const a1 = annotate(letoltes, { type: 'highlight', multiline: 'false', color: 'var(--color-white)' });
   a1.show();
 </script>
