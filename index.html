@@ -15,9 +15,8 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;900&display=block">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -100,14 +99,12 @@
         <div style="width: max(4rem, calc(1.5 * var(--spacing))); height: max(0.3rem, calc(0.10 * var(--spacing))); border-top: max(2px, calc(0.05 * var(--spacing))) solid var(--color-black); border-left: max(2px, calc(0.05 * var(--spacing))) solid var(--color-black); margin-top: max(0.25rem, calc(0.15rem + 0.1vw));"></div>
       </div>
     </div>
-    <div class="fla-hamburger-button">
-      <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" width="48px" height= "48px" viewBox="0 0 192 192" class="fla-hamburger-icon">
-        <circle id="menubuttonbg" class="fla-round-button-bg" cx="96" cy="96" r="96"/>
-        <path class="fla-hamburger-icon-line-1"/>
-        <path class="fla-hamburger-icon-line-2"/>
-        <path class="fla-hamburger-icon-line-3"/>
-      </svg>
-    </div>
+    <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" class="fla-hamburger-icon">
+      <circle class="fla-round-button-bg" cx="96" cy="96" r="96"/>
+      <path class="fla-hamburger-icon-line-1"/>
+      <path class="fla-hamburger-icon-line-2"/>
+      <path class="fla-hamburger-icon-line-3"/>
+    </svg>
     <div id="flaMenu" class="fla-menu-close">
       <br>
       <div><button onclick="setTimeout(showMagyar, 400); hideTortenelem(); hideTrening(); hideForm(); setTimeout(toggleMenu, 200)" type="button" name="Magyar nyelv és irodalom" class="fla-menubutton">Magyar nyelv és irodalom</button></div>
@@ -125,7 +122,9 @@
     <div class="fla-hero-bg"></div>
     <div id="hero" class="fla-reveal">
       <article class="">
-        <h1>Segítünk<br>magasabbra<br>emelkedni.</h1>
+        <h1 id="segitunk">Segítünk</h1>
+        <h1 id="magasabbra">magasabbra</h1>
+        <h1 id="emelkedni">emelkedni.</h1>
         <button onclick="showForm();" type="button" name="jelentkezem" id="fla-hero-button" class="fla-hero-button fla-pulse">Jelentkezem</button>
       </article>
     </div>
@@ -230,14 +229,20 @@
           <p>Akinek kedve van, azzal a nyakunkba vesszük a várost, hogy minél többet lássunk belőle a saját szemünkkel. <span id="setalunk">Sétálunk és Budapest történelméről beszélgetünk</span>, tehát kényelmes cipő és időjárásnak megfelelő öltözet ajánlott. A látottak és hallottak alapján önellenőrző feladatlapot is ki lehet tölteni, ha valaki szeretne.</p>
         </article>
         <figure>
-          <img
-            srcset="content/img/blaha_1.jpg 512w,
-                    content/img/blaha_125.jpg 640w,
-                    content/img/blaha_25.jpg 1280w,
-                    content/img/blaha_5.jpg 2560w"
-            sizes="65vw"
-            src="content/img/blaha_25.jpg"
-            alt="Tanóráink helyszínétől nem messze, a mai Blaha Lujza téren, 1900-ban."/>
+          <picture>
+            <source type="image/webp"
+            srcset="content/img/blaha_1.webp 512w,
+                    content/img/blaha_125.webp 640w,
+                    content/img/blaha_25.webp 1280w,
+                    content/img/blaha_5.webp 2560w"/>
+            <img
+              srcset="content/img/blaha_1.jpg 512w,
+                      content/img/blaha_125.jpg 640w,
+                      content/img/blaha_25.jpg 1280w,
+                      content/img/blaha_5.jpg 2560w"
+              src="content/img/blaha_25.jpg"
+              alt="Tanóráink helyszínétől nem messze, a mai Blaha Lujza téren, 1900-ban."/>
+          </picture>
           <figcaption>Tanóráink helyszínétől nem messze, a mai Blaha Lujza téren, 1900-ban.<br><i>(Forrás: Fortepan / Budapest Főváros Levéltára / Klösz György fényképei; Színezés és rekonstrukció: DeOldify és Real-ESRGAN AI)</i></figcaption>
         </figure>
         <div class="fla-buttons-container">
