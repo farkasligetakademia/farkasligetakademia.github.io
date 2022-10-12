@@ -21,26 +21,6 @@
   --color-green: #4CAF50;
 }
 
-/*:root {
-  --ff-sans: "Jost", sans-serif;;
-  --ff-serif: "EB Garamond", serif;
-
-  --fontsize-xl: max(2rem, calc(1.5rem + 6.5vw));
-  --fontsize-subheading: max(2rem, calc(0.75rem + 1vw));
-  --fontsize-body: max(1.5rem, calc(0.5rem + 0.75vw));
-  --fontsize-heading: max(4rem, calc(2rem + 4.25vw));
-
-  --spacing: max(2rem, calc(0.75rem + 1vw)); /* = --fontsize-subheading */
-
-/*--color-black: #212121;
-  --color-sand: #ffe7c3;
-  --color-blue: #44708e;
-  --color-lightblue: #7aadd2;
-  --color-white: #fcfcfc;
-  --color-red: #F44336;
-  --color-green: #4CAF50;
-}
-
 /* BASIC LAYOUT */
 
 ::selection {
@@ -393,7 +373,7 @@ button {
   white-space: nowrap;
 }
 
-/* hamburger & close */
+/* hamburger */
 
 .fla-round-button-bg {
   fill: transparent;
