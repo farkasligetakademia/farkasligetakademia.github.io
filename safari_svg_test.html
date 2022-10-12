@@ -81,6 +81,26 @@
         transition-duration: 0.2s;
         transition-timing-function: ease-in-out;
       }
+
+      @media not all and (min-resolution:.001dpcm)
+      { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+          .safari_only {
+
+              color:#0000FF;
+              background-color:#CCCCCC;
+
+          }
+
+          .fla-hamburger-icon {
+            display: none;
+          }
+
+          .fla-hamburger-icon-safari {
+            display: block;
+          }
+      }}
+
     </style>
   </head>
   <body>
@@ -91,7 +111,7 @@
       <path class="fla-hamburger-icon-line-3"/>
     </svg>
 
-    <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" class="fla-hamburger-icon">
+    <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" class="fla-hamburger-icon-safari">
       <circle class="fla-round-button-bg" cx="96" cy="96" r="96"/>
       <path d="M64 72 128 72 128 72"/>
       <path d="M128 96 64 96 64 96"/>
