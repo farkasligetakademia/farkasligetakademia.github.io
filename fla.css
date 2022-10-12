@@ -338,7 +338,7 @@ a:visited {
 #wolf {
   background-color: transparent;
   /*margin-top: calc(var(--vh, 1vh) * 130);*/
-  margin-top: 130vh;
+  margin-top: max(calc(14 * var(--fontsize-heading)), 120vh);
   user-select: none;
 }
 
