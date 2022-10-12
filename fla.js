@@ -10,7 +10,7 @@ var OPEN = false;
 const body = document.querySelector('body');
 const menu = document.getElementById("flaMenu");
 const header = document.querySelector("nav");
-const menubutton = document.getElementById("menubuttonbg");
+const menubutton = document.getElementsByClassName("fla-round-button-bg")[0];
   function toggleMenu(){
     if(OPEN){
       OPEN = false;
@@ -171,19 +171,68 @@ window.onload = function () {
       lax.addDriver('scrollY', function () {
         return window.scrollY
       })
-
-      lax.addElements("h1", {
+      lax.addElements("#segitunk", {
         scrollY: {
           opacity: [
-            [0, 500],
+            [75, 500],
             [1, 0],
             {
               easing: 'easeInQuad',
             }
           ],
           scale: [
-            [0, 500],
+            [75, 500],
+            [1, 0.75],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+          translateY: [
+            [75, 500],
+            [0, 75],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+        }
+      })
+      lax.addElements("#magasabbra", {
+        scrollY: {
+          opacity: [
+            [50, 500],
+            [1, 0],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+          scale: [
+            [50, 500],
             [1, 0.5],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+          translateY: [
+            [50, 500],
+            [0, 50],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+        }
+      })
+      lax.addElements("#emelkedni", {
+        scrollY: {
+          opacity: [
+            [25, 500],
+            [1, 0],
+            {
+              easing: 'easeInQuad',
+            }
+          ],
+          scale: [
+            [25, 500],
+            [1, 0.25],
             {
               easing: 'easeInQuad',
             }
