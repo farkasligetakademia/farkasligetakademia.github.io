@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<title>Farkasliget Akadémia</title>
+<title>Farkasliget Akadémia | Ha megbízható magántanárt keresel</title>
+
+<meta name="description" content="Találj megbízható magántanárt, aki segít szerethetővé tenni a történelmet, a nyelvtant, az irodalmat, és akár a mindennapi érvényesülésben is támogat.">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
 
 <!-- Farkasliget Akadémia CSS -->
-<link rel="stylesheet" href="fla.css"/>
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=block">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;900&display=block">
+<link rel="stylesheet" href="css/fla.css"/>
 
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+<link href="fontawesome/css/brands.min.css" rel="stylesheet">
 
 <script type="text/javascript">
   function load() {
@@ -29,18 +27,19 @@
 </script>
 
 <!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="css/aos.css" rel="stylesheet">
+<script src="js/aos.js"></script>
 
 <!-- LAX -->
-<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+<script src="js/lax.js" ></script>
 
 </head>
 <body onload="load">
   <!-- Header & Nav -->
-  <nav id="fla-header">
-    <!--<button onlcick="backHome()" style="padding: 0; text-align: left;">--><div id="lockup">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 272" style="width: max(3rem, calc(1.25 * var(--spacing))); margin-right: max(0.5rem, calc(0.15rem + 0.25vw));">
+  <nav id="fla-header" class="my-fill-gap-element" data-scroll-lock-fill-gap>
+    <button onclick="backHome();" type="button" name="home">
+    <div id="lockup">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 272">
         <defs>
           <style>
             .a, .b {
@@ -94,10 +93,11 @@
         </g>
       </svg>
       <div id="lockup-text">
-        <h5 style="line-height: 125%; margin: 0; font-weight: 500;">Farkasliget<br>Akadémia</h5>
-        <div style="width: max(4rem, calc(1.5 * var(--spacing))); height: max(0.3rem, calc(0.10 * var(--spacing))); border-top: max(2px, calc(0.05 * var(--spacing))) solid var(--color-black); border-left: max(2px, calc(0.05 * var(--spacing))) solid var(--color-black); margin-top: max(0.25rem, calc(0.15rem + 0.1vw));"></div>
+        <h5>Farkasliget<br>Akadémia</h5>
+        <div></div>
       </div>
-    </div><!--</button>-->
+    </div>
+    </button>
     <svg onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" class="fla-hamburger-icon">
       <circle class="fla-round-button-bg" cx="96" cy="96" r="96"/>
       <path d="M64 72 128 72 128 72" class="fla-hamburger-icon-line-1"/>
@@ -105,12 +105,11 @@
       <path d="M64 120 128 120 128 120" class="fla-hamburger-icon-line-3"/>
     </svg>
     <div id="flaMenu" class="fla-menu-close">
-      <br>
-      <div><button onclick="setTimeout(showMagyar, 400); hideTortenelem(); hideTrening(); hideForm(); setTimeout(toggleMenu, 200)" type="button" name="Magyar nyelv és irodalom" class="fla-menubutton">Magyar nyelv és irodalom</button></div>
-      <div><button onclick="setTimeout(showTortenelem, 400); hideMagyar(); hideTrening(); hideForm(); setTimeout(toggleMenu, 200)" type="button" name="Történelem" class="fla-menubutton">Történelem</button></div>
-      <div><button onclick="setTimeout(showTrening, 400); hideMagyar(); hideTortenelem(); hideForm(); setTimeout(toggleMenu, 200)" type="button" name="Tréning és tanácsadás" class="fla-menubutton">Tréning és tanácsadás</button></div>
-      <div><button onclick="setTimeout(function(){location.href='#rolunk'}, 400); hideMagyar(); hideTortenelem(); hideTrening(); hideForm(); toggleMenu()" type="button" name="Rólunk mondták" class="fla-menubutton">Rólunk mondták</button></div>
-      <div><button onclick="setTimeout(function(){location.href='#eredet'}, 400); hideMagyar(); hideTortenelem(); hideTrening(); hideForm(); toggleMenu()" type="button" name="Nevünk eredete" class="fla-menubutton">Nevünk eredete</button></div>
+      <div><button onclick="setTimeout(showMagyar, 0); hideTortenelem(); hideTrening(); hideForm(); setTimeout(toggleMenu, 0)" type="button" name="Magyar nyelv és irodalom" class="fla-menubutton">Magyar nyelv és irodalom</button></div>
+      <div><button onclick="setTimeout(showTortenelem, 0); hideMagyar(); hideTrening(); hideForm(); setTimeout(toggleMenu, 0)" type="button" name="Történelem" class="fla-menubutton">Történelem</button></div>
+      <div><button onclick="setTimeout(showTrening, 0); hideMagyar(); hideTortenelem(); hideForm(); setTimeout(toggleMenu, 0)" type="button" name="Tréning és tanácsadás" class="fla-menubutton">Tréning és tanácsadás</button></div>
+      <div><button onclick="setTimeout(function(){location.href='#rolunk'}, 0); hideMagyar(); hideTortenelem(); hideTrening(); hideForm(); toggleMenu()" type="button" name="Rólunk mondták" class="fla-menubutton">Rólunk mondták</button></div>
+      <div><button onclick="setTimeout(function(){location.href='#eredet'}, 0); hideMagyar(); hideTortenelem(); hideTrening(); hideForm(); toggleMenu()" type="button" name="Nevünk eredete" class="fla-menubutton">Nevünk eredete</button></div>
     </div>
   </nav>
 
@@ -118,24 +117,24 @@
   <main>
 
     <!-- Hero -->
-    <div class="fla-hero-bg"></div>
-    <div id="hero" class="fla-reveal">
+    <div id="fla-hero-bg" class="fla-gradient"></div>
+    <div id="hero" class="fla-reveal" class="my-fill-gap-element" data-scroll-lock-fill-gap>
       <article class="">
         <h1 id="segitunk">Segítünk</h1>
         <h1 id="magasabbra">magasabbra</h1>
         <h1 id="emelkedni">emelkedni.</h1>
-        <button onclick="showForm();" type="button" name="jelentkezem" id="fla-hero-button" class="fla-hero-button fla-pulse">Jelentkezem</button>
+        <button onclick="showForm();" type="button" name="jelentkezem" id="fla-hero-button" class="fla-hero-button">Jelentkezem</button>
       </article>
     </div>
     <section id="wolf">
-      <article style="padding-bottom:0;">
-        <img src="content/svg/logo_hero_top.svg" alt="" loading="eager" decoding="sync" style="width: calc(132px + 5vw); z-index: 1;">
+      <article>
+        <img src="content/svg/logo_hero_top.svg" alt="" loading="eager" decoding="sync">
         <img id="column" src="content/svg/logo_hero_bottom.svg" alt="" loading="eager" decoding="sync">
       </article>
     </section>
 
     <!-- Cards -->
-    <section id="" class="fla-flex-3 fla-divider" style="padding-top: calc(4 * var(--spacing)); z-index: 5;">
+    <section class="fla-flex-3 fla-divider fla-section-paddingtop">
       <article class="fla-benefits-card fla-left fla-list-decor-1" data-aos="fade-up" data-aos-duration="500">
           <h4>Biztos alapokra lenne szükség?</h4>
           <ul>
@@ -162,23 +161,23 @@
       </article>
     </section>
 
-    <section class="fla-flex-3 fla-center" style="padding-bottom: calc(4 * var(--spacing));">
+    <section class="fla-flex-3 fla-center fla-section-paddingbottom">
       <article class="fla-product-card" data-aos="fade-up" data-aos-duration="500">
-          <img src="content/svg/⁯icon_irodalom.svg" alt="ble" style="width: calc(4 * var(--spacing));">
+          <img src="content/svg/⁯icon_irodalom.svg" alt="Könyv ikon">
           <h4>Magyar nyelv és irodalom</h4>
-          <p style="margin-bottom: calc(0.5 * var(--spacing));">Hogyan válhat szerethetővé ez a nehezen megfogható tantárgy?</p>
-          <button type="button" onclick="showMagyar();" name="irodalom" class="fla-button">Érdekel</button>
+          <p>Hogyan válhat szerethetővé ez a nehezen megfogható tantárgy?</p>
+          <button type="button" onclick="showMagyar()" name="irodalom" class="fla-button">Érdekel</button>
       </article>
       <article class="fla-product-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
-          <img src="content/svg/⁯icon_tortenelem.svg" alt="bu" style="width: calc(4 * var(--spacing));">
+          <img src="content/svg/⁯icon_tortenelem.svg" alt="Oszlopfő ikon">
           <h4>Történelem</h4>
-          <p style="margin-bottom: calc(0.5 * var(--spacing));">Hogyan tehetünk rendet az események sokaságában?</p>
+          <p>Hogyan tehetünk rendet az események sokaságában?</p>
           <button type="button" onclick="showTortenelem()" name="tortenelem" class="fla-button">Érdekel</button>
       </article>
       <article class="fla-product-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
-          <img src="content/svg/⁯icon_trening.svg" alt="dfhdfh" style="width: calc(4 * var(--spacing));">
+          <img src="content/svg/⁯icon_trening.svg" alt="Arc ikon">
           <h4>Tréning és tanácsadás</h4>
-          <p style="margin-bottom: calc(0.5 * var(--spacing));">Hogyan lehettek sikeresebbek az iskolapadon kívül?</p>
+          <p>Hogyan lehettek sikeresebbek az iskolapadon kívül?</p>
           <button type="button" onclick="showTrening()" name="trening" class="fla-button">Érdekel</button>
       </article>
     </section>
@@ -188,11 +187,11 @@
         <h2>Magyar nyelv és irodalom</h2>
         <article>
           <h3>Magyar középiskolai felvételi előkészítő</h3>
-          <p>Egy nehéz és zsúfolt negyvenöt perces feladatlap, amin annyi minden múlhat. Ismerős? <span id="aggodalom"> Nem kell aggódni miatta,</span> segítünk: hatfős csoportban vagy egyéni foglalkozásokon pótoljuk az olyan témákat, mint a nyelvtan, a szövegértés, a verstan vagy a fogalmazás. Megértünk, tanulunk és gyakorlunk egészen addig, amíg magabiztosan nem megy, közben jókat nevetünk a csodálatos magyar nyelv humorán. Aztán ha az írásbeli felvételinek vége, a szóbelire is szánunk néhány alkalmat: megtanulunk úgy bemutatkozni, hogy a lehető legjobb benyomást tehessük.</p>
+          <p>Egy nehéz és zsúfolt negyvenöt perces feladatlap, amin annyi minden múlhat. Ismerős? <span id="aggodalom"> Nem kell aggódni miatta,</span> segítünk: <span class="fla-highlight">hatfős csoportban vagy egyéni foglalkozásokon</span> pótoljuk az olyan témákat, mint a nyelvtan, a szövegértés, a verstan vagy a fogalmazás. Megértünk, tanulunk és gyakorlunk egészen addig, amíg magabiztosan nem megy, közben jókat nevetünk a csodálatos magyar nyelv humorán. Aztán ha az írásbeli felvételinek vége, a szóbelire is szánunk néhány alkalmat: megtanulunk úgy bemutatkozni, hogy a lehető legjobb benyomást tehessük.</p>
         </article>
         <article>
           <h3>Érettségi felkészítés magyarból</h3>
-          <p>Kicsit homályos követelmények egy nehezen megfogható tantárgyból, pontszámolgatás, idegeskedés – nem lesz gond, fogunk tudni segíteni, hatfős csoportban és egyénileg is. Végigvesszük a szövegértést, az érvelő fogalmazást, a műértelmezést és a szóbeli tételeket is. Ezalatt egyrészt fejlődik írásbeli és szóbeli megnyilvánulási készségünk, másrészt a versek és egyéb művek által jobban megismerhetjük önmagunkat.</p>
+          <p>Kicsit homályos követelmények egy nehezen megfogható tantárgyból, pontszámolgatás, idegeskedés – nem lesz gond, fogunk tudni segíteni, hatfős csoportban és egyénileg is. Végigvesszük a szövegértést, az érvelő fogalmazást, a műértelmezést és a szóbeli tételeket is. Ezalatt egyrészt fejlődik írásbeli és szóbeli megnyilvánulási készségünk, másrészt a versek és egyéb művek által <span class="fla-highlight">jobban megismerhetjük önmagunkat.</span></p>
         </article>
         <figure >
           <img
@@ -202,15 +201,16 @@
                     content/img/kezirat_5.gif 2560w"
             sizes="65vw"
             src="content/img/kezirat_25.gif"
-            alt="József Attila kézirata"/>
+            alt="József Attila kézirata"
+            loading="lazy"/>
           <figcaption>József Attila kézirata<br><i>(Forrás: Wikimedia Commons)</i></figcaption>
         </figure>
         <div class="fla-buttons-container">
           <div>
-            <button onclick="closeMagyar()" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
+            <button onclick="closeMagyar();" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
           </div>
           <div>
-            <button onclick="setTimeout(showForm(), 400);" class="fla-cta-button" type="button" name="jelentkezem">Jelentkezem</button>
+            <button onclick="showForm();" class="fla-cta-button" type="button" name="jelentkezem">Jelentkezem</button>
           </div>
         </div>
       </section>
@@ -221,11 +221,11 @@
         <h2>Történelem</h2>
         <article>
           <h3>Érettségi felkészítés történelemből</h3>
-          <p>Évszámok, nevek és fogalmak. Eszmék, folyamatok és összefüggések. Mindez ravaszul kikérdezve írásbeli feladatsor, esszé és szóbeli tételek formájában. Valóban nagy megmérettetés, de aki vállalja, az nagy lépést tesz a valódi érettség felé. Ebben segítünk hatfős csoportos, vagy akár egyéni felkészítésen. Átismételjük a történelmet, gyakorlófeladatokat nézünk, és megpróbáljuk gondolatainkat a megfelelő formába önteni.</p>
+          <p>Évszámok, nevek és fogalmak. Eszmék, folyamatok és összefüggések. Mindez ravaszul kikérdezve írásbeli feladatsor, esszé és szóbeli tételek formájában. Valóban nagy megmérettetés, de <span class="fla-highlight">aki vállalja, az nagy lépést tesz</span> a valódi érettség felé. Ebben segítünk hatfős csoportos, vagy akár egyéni felkészítésen. Átismételjük a történelmet, gyakorlófeladatokat nézünk, és megpróbáljuk gondolatainkat a megfelelő formába önteni.</p>
         </article>
         <article>
           <h3>Kihelyezett történelemórák Budapest-szerte</h3>
-          <p>Akinek kedve van, azzal a nyakunkba vesszük a várost, hogy minél többet lássunk belőle a saját szemünkkel. <span id="setalunk">Sétálunk és Budapest történelméről beszélgetünk</span>, tehát kényelmes cipő és időjárásnak megfelelő öltözet ajánlott. A látottak és hallottak alapján önellenőrző feladatlapot is ki lehet tölteni, ha valaki szeretne.</p>
+          <p>Akinek kedve van, azzal a <span class="fla-highlight">nyakunkba vesszük a várost,</span> hogy minél többet lássunk belőle a saját szemünkkel. <span id="setalunk">Sétálunk és Budapest történelméről beszélgetünk</span>, tehát kényelmes cipő és időjárásnak megfelelő öltözet ajánlott. A látottak és hallottak alapján önellenőrző feladatlapot is ki lehet tölteni, ha valaki szeretne.</p>
         </article>
         <figure>
           <picture>
@@ -240,16 +240,17 @@
                       content/img/blaha_25.jpg 1280w,
                       content/img/blaha_5.jpg 2560w"
               src="content/img/blaha_25.jpg"
-              alt="Tanóráink helyszínétől nem messze, a mai Blaha Lujza téren, 1900-ban."/>
+              alt="Tanóráink helyszínétől nem messze, a mai Blaha Lujza téren, 1900-ban."
+              loading="lazy"/>
           </picture>
           <figcaption>Tanóráink helyszínétől nem messze, a mai Blaha Lujza téren, 1900-ban.<br><i>(Forrás: Fortepan / Budapest Főváros Levéltára / Klösz György fényképei; Színezés és rekonstrukció: DeOldify és Real-ESRGAN AI)</i></figcaption>
         </figure>
         <div class="fla-buttons-container">
           <div>
-            <button onclick="closeTortenelem()" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
+            <button onclick="closeTortenelem();" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
           </div>
           <div>
-            <button onclick="setTimeout(showForm(), 400);" class="fla-cta-button" type="button" name="jelentkezem">Jelentkezem</button>
+            <button onclick="showForm();" class="fla-cta-button" type="button" name="jelentkezem">Jelentkezem</button>
           </div>
         </div>
       </section>
@@ -264,11 +265,11 @@
         </article>
         <article>
           <h3>Tanácsadás tanároknak</h3>
-          <p>Akinek kedve van, azzal a nyakunkba vesszük a várost, hogy minél többet lássunk belőle a saját szemünkkel. Sétálunk és Budapest történelméről beszélgetünk, tehát kényelmes cipő és időjárásnak megfelelő öltözet ajánlott. A látottak és hallottak alapján önellenőrző feladatlapot is ki lehet tölteni, ha valaki szeretne.</p>
+          <p>Vége az egyetemi éveknek, és ott állunk a tanteremben egy osztály előtt azt érezve, hogy mostantól már mindig nekünk kell felelnünk az összes témából – és nem hibázhatunk. Sok pályakezdő kolléga él át hasonlót, de ennek nem muszáj így lennie, tudunk tanácsot és segítséget adni. Fő témáink az óratervezés, időmenedzsment és hasonlók, <span class="fla-highlight">elsősorban pályakezdő magyar- és történelemtanárokat várunk,</span> de talán már egy ideje a pályán lévő és egyéb szakos kollégák számára is vannak használható ötleteink, sőt osztályfőnökökkel is sok közös témánk lenne.</p>
         </article>
         <article>
           <h3>Tanácsadás szülőknek</h3>
-          <p>Tanári gyakorlatunk során nagyon sokféle családi élethelyzettel találkozunk. Természetes, hogy a mai, gyorsan változó világban sokan küzdenek nehézségekkel. Ebben tudunk segítséget nyújtani, ha valaki kéri, néhány praktikus ötlettel és javaslattal, szem előtt tartva a családok boldogulását. Egy teázással egybekötött beszélgetés és együtt gondolkodás mindig jót tesz. Közös célunk, hogy a család több legyen, mint pusztán a tagjainak összessége, egy önmagán túlmutató, szeretetteli, igazi közösség.</p>
+          <p>Tanári gyakorlatunk során nagyon sokféle családi élethelyzettel találkozunk. Természetes, hogy a mai, gyorsan változó világban sokan küzdenek nehézségekkel. Ebben tudunk segítséget nyújtani, ha valaki kéri, néhány praktikus ötlettel és javaslattal, szem előtt tartva a családok boldogulását. <span class="fla-highlight">Egy teázással egybekötött beszélgetés</span> és együtt gondolkodás mindig jót tesz. Közös célunk, hogy a család több legyen, mint pusztán a tagjainak összessége, egy önmagán túlmutató, szeretetteli, igazi közösség.</p>
         </article>
         <article>
           <h3>Egyéb lehetőségek</h3>
@@ -296,16 +297,17 @@
                       content/img/divat_5.jpg 2560w,
                       content/img/divat_10.jpg 5120w"
               src="content/img/divat_25.jpg"
-              alt="Tanárunk, Kovács Ákos (Fotó: Bartis Milán)"/>
+              alt="Tanárunk, Kovács Ákos (Fotó: Bartis Milán)"
+              loading="lazy"/>
           </picture>
           <figcaption>Tanárunk, Kovács Ákos.<br><i>(Fotó: Bartis Milán)</i></figcaption>
         </figure>
         <div class="fla-buttons-container">
           <div>
-            <button onclick="closeTrening()" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
+            <button onclick="closeTrening();" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
           </div>
           <div>
-            <button onclick="setTimeout(showForm(), 400);" class="fla-cta-button" type="button" name="jelentkezem">Jelentkezem</button>
+            <button onclick="showForm();" class="fla-cta-button" type="button" name="jelentkezem">Jelentkezem</button>
           </div>
         </div>
       </section>
@@ -313,8 +315,8 @@
 
     <!-- Testimonials -->
     <section id="rolunk" class="fla-testimonials">
-      <article class="" style="background-color: var(--color-black); color: var(--color-white); flex-direction: column; width: 50%; justify-content: space-between;">
-        <h3 class="fla-center" style="padding-top: var(--spacing);" data-aos="fade-right" data-aos-duration="500">Rólunk mondták</h3>
+      <article>
+        <h3 class="fla-center" data-aos="fade-right" data-aos-duration="500">Rólunk mondták</h3>
         <!-- Slider main container -->
         <div class="swiper">
           <!-- Additional required wrapper -->
@@ -347,7 +349,8 @@
                          (min-width: 640px) 85vw,
                          85vw"
                   src="content/img/t_botond_25.gif"
-                  alt="„Az órákon barátságos és eleven a légkör. Van lehetőségünk elmondani az észrevételeinket, és kérdezni bármilyen mennyiségben.” (Botond, 23 éves)"/>
+                  alt="„Az órákon barátságos és eleven a légkör. Van lehetőségünk elmondani az észrevételeinket, és kérdezni bármilyen mennyiségben.” (Botond, 23 éves)"
+                  loading="lazy"/>
               </div>
             </div>
             <div class="swiper-slide">
@@ -362,7 +365,8 @@
                          (min-width: 640px) 85vw,
                          85vw"
                   src="content/img/t_emese_25.gif"
-                  alt="„Egyetemen sem volt gond az esszéírással, az érettségi felkészítésnek köszönhetően.” (Emese, 24 éves)"/>
+                  alt="„Egyetemen sem volt gond az esszéírással, az érettségi felkészítésnek köszönhetően.” (Emese, 24 éves)"
+                  loading="lazy"/>
               </div>
             </div>
           </div>
@@ -402,31 +406,31 @@
 
 
     <!-- Nevünk eredete -->
-    <section id="eredet">
+    <section id="eredet" class="fla-section-paddingtop">
       <article>
         <div>
-          <h3 id="nevunk" style="text-align: center;" data-aos="fade-right" data-aos-duration="500">Nevünk eredete</h3>
-          <p style="max-width: calc(26  * var(--spacing));" data-aos="fade-up" data-aos-duration="750">A névválasztással a két legnagyobb ókori gondolkodó, Platón és Arisztotelész előtt tisztelgünk. Mindkettőjüknek saját magániskolája volt: <span id="filozofusok">a Farkasligetben Arisztotelész, Akadémosz ligetében pedig Platón fogadta a tanulni vágyókat.</span> Ők ketten alapozták meg a görög filozófiát, és az emberek figyelmét örök értékek felé fordították, egy emelkedett látásmód lehetőségét adva nekik. Bár nem mérhetjük magunkat őhozzájuk, mégis hiszünk abban, hogy tanár és tanítványai találkozása a huszonegyedik században is létrejöhet, így az elméleti és gyakorlati tudás fölfedezésén túl az örök értékeket is szóba hozhatjuk.</p>
+          <h3 data-aos="fade-right" data-aos-duration="500">Nevünk eredete</h3>
+          <p data-aos="fade-up" data-aos-duration="750">A névválasztással a két legnagyobb ókori gondolkodó, Platón és Arisztotelész előtt tisztelgünk. Mindkettőjüknek saját magániskolája volt: <span class="fla-highlight" id="filozofusok">a Farkasligetben Arisztotelész, Akadémosz ligetében pedig Platón fogadta a tanulni vágyókat.</span> Ők ketten alapozták meg a görög filozófiát, és az emberek figyelmét örök értékek felé fordították, egy emelkedett látásmód lehetőségét adva nekik. Bár nem mérhetjük magunkat őhozzájuk, mégis hiszünk abban, hogy tanár és tanítványai találkozása a huszonegyedik században is létrejöhet, így az elméleti és gyakorlati tudás fölfedezésén túl az örök értékeket <span class="nowrap">is szóba hozhatjuk.</span></p>
         </div>
-        <picture style="width: 75%; margin: var(--spacing); max-width: calc(28 * var(--spacing));" data-aos="fade-in" data-aos-duration="750">
+        <picture data-aos="fade-in" data-aos-duration="750">
           <source media="(max-width: 900px)" srcset="content/svg/falka_3.svg" />
           <source media="(min-width: 901px)" srcset="content/svg/falka_5.svg" />
           <img src="content/svg/⁯falka_5.svg" alt="A farkasfalka">
         </picture>
       </article>
-      <div class="fla-buttons-container" style="justify-content: center; margin-top: calc(-2 * var(--spacing));">
+      <div class="fla-buttons-container">
         <button onclick="showForm();" type="button" name="jelentkezem" class="fla-cta-button">Jelentkezem</button>
       </div>
     </section>
 
     <!-- Footer -->
-    <section class="fla-flex-2 fla-divider-white" style="background-color: var(--color-black); color: var(--color-white); padding-top: calc(3 * var(--spacing));">
-      <article class="fla-social">
-        <i class="fa fa-facebook-official" style="font-size: 3rem;"></i>
-        <i class="fa fa-instagram" style="font-size: 3rem;"></i>
+    <section id="footer" class="fla-flex-2 fla-divider-white">
+      <article>
+        <i class="fa-brands fa-facebook-square"></i>
+        <i class="fa-brands fa-instagram"></i>
       </article>
       <article>
-        <p><i>„És ahol a farkas megjelenik, ott nem a világtól független személyi akarat nyilatkozik meg, hanem a világ legmélyebb lénye és legősibb arca: az aranykori derű.”<br><br>(Hamvas Béla)</i></p>
+        <p><i>„És ahol a farkas megjelenik, ott nem a világtól független személyi akarat nyilatkozik meg, hanem a világ legmélyebb lénye és legősibb arca: az <span class="nowrap"> aranykori derű.”</span><br><br>(Hamvas Béla)</i></p>
       </article>
     </section>
 
@@ -436,7 +440,7 @@
   </main>
 
   <!-- Form -->
-  <form id="apply" class="fla-fullscreen-modal fla-productpage" action="https://useforma.app/s/9773ec05-9826-4a4f-8989-fedecf73c828" method="post">
+  <form id="apply" class="fla-fullscreen-modal fla-productpage" accept-charset='UTF-8' action='https://app.formester.com/forms/0d8a5dbf-bb4b-4215-9078-88dc24c95b7e/submissions' method='POST'>
     <section class="fla-form">
       <h2>Hogyan segíthetünk?</h2>
       <article>
@@ -482,24 +486,26 @@
         </div>
       </article>
     </section>
-    <section class="fla-form" style="padding-top: 0; justify-content: flex-end;">
-      <div class="" style="display: flex; flex-direction: column; justify-content: stretch; flex: 1 40%;">
-        <label class="fla-label fla-label-required fla-label-nocontainer" style="text-align: left;">Név</label>
-        <input name="nev" class="fla-input" type="text" placeholder="Érdeklődő Vagyok" required pattern=".*\S.*" style="flex: 1;">
+    <section class="fla-name-email">
+      <div class="grid-span-1">
+        <label class="fla-label fla-label-required fla-label-nocontainer">Név</label>
+        <input name="nev" class="fla-input" type="text" placeholder="Érdeklődő Vagyok" required pattern=".*\S.*">
       </div>
-      <div class="" style="display: flex; flex-direction: column; justify-content: stretch; flex: 1 40%;">
-        <label class="fla-label fla-label-required fla-label-nocontainer" style="text-align: left;">E-mail</label>
+      <div class="grid-span-1">
+        <label class="fla-label fla-label-required fla-label-nocontainer grid-span-1">E-mail</label>
         <input name="email" class="fla-input" type="email" placeholder="erdeklodo.vagyok@email.hu" required="">
       </div>
-      <label class="fla-label fla-label-nocontainer" style="width: 100%; text-align: left;">Üzensz valamit?</label>
-      <textarea name="megjegyzes" rows="8" class="fla-textbox" placeholder="Elmondanám néhány szóban, hogy..." style="flex: 1 100%;"></textarea>
-      <div class="" style="margin: calc(0.25 * var(--spacing)) var(--spacing);">
-        <label for="adatkezeles" class="fla-label fla-label-required" style="align-self: flex-end; margin: 0; white-space: normal;">Elfogadom az <a href="adatkezeles.html" target="_blank">Adatkezelési tájékoztatót.</a></label>
+    </section>
+    <section class="fla-form fla-message">
+      <label class="fla-label fla-label-nocontainer">Üzensz valamit?</label>
+      <textarea name="megjegyzes" rows="8" class="fla-textbox" placeholder="Elmondanám néhány szóban, hogy..."></textarea>
+      <div class="fla-privacy-container">
+        <label for="adatkezeles" class="fla-label fla-label-required">Elfogadom az <a href="adatkezeles.html" target="_blank">Adatkezelési tájékoztatót.</a></label>
         <input name="adatkezeles" id="adatkezeles" type="checkbox" class="fla-check-box-data" required>
       </div>
       <div class="fla-buttons-container">
         <div>
-          <button onclick="closeForm()" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
+          <button onclick="closeForm();" class="fla-button fla-back-button" type="button" name="vissza">Vissza</button>
         </div>
         <div>
           <button class="fla-cta-button" type="submit" name="küldés" [disabled]="!apply.valid">Küldés</button>
@@ -509,32 +515,18 @@
   </form>
 
   <!-- Swiper -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
 
   <!-- AOS -->
   <script type="application/javascript">
     AOS.init();
   </script>
 
+  <!-- scroll-lock by FL3NKEY -->
+  <script src="js/scroll-lock.min.js"></script>
+
   <!-- Farkasliget Akadémia JS -->
-  <script src="fla.js"></script>
+  <script src="js/fla.js"></script>
 
-  <!-- Rough Notation -->
-  <script type="module" src="https://unpkg.com/rough-notation?module"></script>
-
-  <script type="module">
-    import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
-    // Or using unpkg
-    // import { annotate } from 'https://unpkg.com/rough-notation?module';
-    const aggodalom = document.querySelector('#aggodalom');
-    const setalunk = document.querySelector('#setalunk');
-    const filozofusok = document.querySelector('#filozofusok');
-    const a1 = annotate(aggodalom, { type: 'highlight', multiline: 'true', color: 'var(--color-sand)' });
-    const a2 = annotate(setalunk, { type: 'highlight', multiline: 'true', color: 'var(--color-sand)' });
-    const a3 = annotate(filozofusok, { type: 'highlight', multiline: 'true', color: 'var(--color-sand)' });
-    a1.hide();
-    a2.hide();
-    a3.show();
-  </script>
 </body>
 </html>
