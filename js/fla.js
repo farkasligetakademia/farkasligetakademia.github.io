@@ -90,7 +90,7 @@ function closeMagyar() {
 
 function showTortenelem() {
   window.history.pushState({ isModal: true }, 'Történelem');
-  scrollLock.disablePageScroll();
+  scrollLock.disablePageScroll(modalTortenelem);
   modalTortenelem.scrollTop = 0;
   modalTortenelem.classList.add('show');
 };
@@ -106,7 +106,7 @@ function closeTortenelem() {
 
 function showTrening() {
   window.history.pushState({ isModal: true }, 'Tréning és tanácsadás');
-  scrollLock.disablePageScroll();
+  scrollLock.disablePageScroll(modalTrening);
   modalTrening.scrollTop = 0;
   modalTrening.classList.add('show');
 };
@@ -122,7 +122,7 @@ function closeTrening() {
 
 function showForm() {
   window.history.pushState({ isModal: true }, 'Jelentkezés');
-  scrollLock.disablePageScroll();
+  scrollLock.disablePageScroll(modalForm);
   modalForm.scrollTop = 0;
   modalForm.classList.add('show');
 };
