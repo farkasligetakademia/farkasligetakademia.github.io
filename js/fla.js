@@ -74,7 +74,7 @@ const modalForm = document.getElementById('apply');
 
 function showMagyar() {
   window.history.pushState({ isModal: true }, 'Magyar nyelv és irodalom');
-  scrollLock.disablePageScroll();
+  scrollLock.disablePageScroll(modalMagyar);
   modalMagyar.scrollTop = 0;
   modalMagyar.classList.add('show');
 };
