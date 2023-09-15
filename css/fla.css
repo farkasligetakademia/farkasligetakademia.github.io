@@ -361,10 +361,15 @@ a:visited {
 
 .fla-productpage > section > article {
   align-items: flex-start;
+  /*padding-bottom:0;*/
 }
 
 .fla-productpage > section > figure > img {
   width: 100%;
+}
+
+.fla-productpage > section > button {
+  margin-block: calc(3*var(--fontsize-body));
 }
 
 .fla-divider::after, .fla-divider-white::after {
@@ -508,10 +513,11 @@ a:visited {
 
 /* BUTTONS */
 
-button {
+button, .fla-was-button, .fla-was-button:link, .fla-was-button:visited {
   background-color: transparent;
   background-position: center;
   border: none;
+  color: var(--color-black);
   cursor: pointer;
   display: inline-block;
   font-family: var(--ff-sans);
@@ -533,6 +539,28 @@ button {
 button[name="home"] {
   text-align: left;
   padding: 0;
+}
+
+button[name="down"] {
+  position: fixed;
+  bottom: calc(2* var(--fontsize-body));
+  transform-origin: top;
+  border-radius: 100%;
+  padding: 0px;
+}
+
+button[name="down"] > img {
+  height: max(2.5rem, calc(0.5 * var(--fontsize-heading)));
+  animation: 800ms infinite alternate ease-in-out pulse;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 /* hamburger */
@@ -599,7 +627,7 @@ button[name="home"] {
   padding: calc(0.75 * max(1rem, var(--fontsize-body))) calc(1.25 * max(1rem, var(--fontsize-body)));
 }
 
-.fla-button {
+.fla-button, .fla-button:link, .fla-button:visited {
   background-color: var(--color-black);
   color: var(--color-white);
 }

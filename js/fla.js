@@ -1,153 +1,25 @@
-// Open & Close Navigation
+// Display Header
 
-var OPEN = false;
-const html = document.querySelector('html');
-const body = document.querySelector('body');
-const menu = document.getElementById("flaMenu");
-const header = document.querySelector("nav");
-const menubutton = document.getElementsByClassName("fla-round-button-bg")[0];
-  function toggleMenu(){
-    if(OPEN){
-      OPEN = false;
-      //scrollLock.enablePageScroll();
-      menu.classList.remove("fla-menu-open");
-      menu.classList.add("fla-menu-close");
-      header.classList.remove("fla-header-fullscreen");
-      menubutton.classList.remove("fla-round-button-bg-active");
-    } else {
-      OPEN = true;
-      //scrollLock.disablePageScroll();
-      menu.classList.add("fla-menu-open");
-      menu.classList.remove("fla-menu-close");
-      header.classList.add("fla-header-fullscreen");
-      menubutton.classList.add("fla-round-button-bg-active");
-      window.history.pushState({ isMenu: true }, 'Menü');
-    }
-  };
+const myHeader = document.getElementById("fla-header");
+const h1 = document.querySelector("h1");
+const herobutton = document.getElementById("fla-hero-button");
+const column = document.getElementById("column");
+const heroText = document.getElementById("hero");
+const wolfDiv = document.getElementById("wolf");
+const heroBg = document.getElementById("fla-hero-bg");
+var wolfDivStyle = wolfDiv.currentStyle || window.getComputedStyle(wolfDiv);
+var headerAppear = wolf.offsetHeight + parseInt(wolfDivStyle.marginTop) - myHeader.offsetHeight;
 
-  // Display Header
-
-  const myHeader = document.getElementById("fla-header");
-  const h1 = document.querySelector("h1");
-  const herobutton = document.getElementById("fla-hero-button")
-  const column = document.getElementById("column");
-  const heroText = document.getElementById("hero");
-  const wolfDiv = document.getElementById("wolf");
-  const heroBg = document.getElementById("fla-hero-bg");
-  var wolfDivStyle = wolfDiv.currentStyle || window.getComputedStyle(wolfDiv);
-  var headerAppear = wolf.offsetHeight + parseInt(wolfDivStyle.marginTop) - header.offsetHeight;
-
-  window.onscroll = function() {
-    "use strict";
-    if (document.body.scrollTop >= headerAppear || document.documentElement.scrollTop >= headerAppear) {
-      myHeader.classList.add("fla-header-show");
-      heroBg.style.opacity = '0';
-      heroText.classList.add("fla-hero-hide");
-    } else {
-      myHeader.classList.remove("fla-header-show");
-      heroBg.style.opacity = '1';
-      heroText.classList.remove("fla-hero-hide");
-    }
-  };
-
-// Home
-
-function backHome() {
-  if(OPEN) {
-    toggleMenu();
-    isMenu = false;
-  };
-  hideMagyar();
-  hideTortenelem();
-  hideTrening();
-  hideForm();
-  setTimeout(function (){window.scrollTo(0, 0);}, 200);
-  isModal = false;
-}
-
-// Modals
-
-const modalMagyar = document.getElementById('magyar');
-const modalTortenelem = document.getElementById('tortenelem');
-const modalTrening = document.getElementById('trening');
-const modalForm = document.getElementById('apply');
-
-function showMagyar() {
-  window.history.pushState({ isModal: true }, 'Magyar nyelv és irodalom');
-  scrollLock.disablePageScroll(modalMagyar);
-  modalMagyar.scrollTop = 0;
-  modalMagyar.classList.add('show');
-};
-
-function hideMagyar() {
-  modalMagyar.classList.remove('show');
-  scrollLock.enablePageScroll();
-};
-
-function closeMagyar() {
-  window.history.back();
-};
-
-function showTortenelem() {
-  window.history.pushState({ isModal: true }, 'Történelem');
-  scrollLock.disablePageScroll(modalTortenelem);
-  modalTortenelem.scrollTop = 0;
-  modalTortenelem.classList.add('show');
-};
-
-function hideTortenelem() {
-  modalTortenelem.classList.remove('show');
-  scrollLock.enablePageScroll();
-};
-
-function closeTortenelem() {
-  window.history.back();
-};
-
-function showTrening() {
-  window.history.pushState({ isModal: true }, 'Tréning és tanácsadás');
-  scrollLock.disablePageScroll(modalTrening);
-  modalTrening.scrollTop = 0;
-  modalTrening.classList.add('show');
-};
-
-function hideTrening() {
-  modalTrening.classList.remove('show');
-  scrollLock.enablePageScroll();
-};
-
-function closeTrening() {
-  window.history.back();
-};
-
-function showForm() {
-  window.history.pushState({ isModal: true }, 'Jelentkezés');
-  scrollLock.disablePageScroll(modalForm);
-  modalForm.scrollTop = 0;
-  modalForm.classList.add('show');
-};
-
-function hideForm() {
-  modalForm.classList.remove('show');
-  scrollLock.enablePageScroll();
-};
-
-function closeForm() {
-  window.history.back();
-};
-
-window.onpopstate = function() {
-  if(OPEN) {
-    toggleMenu();
-    isMenu = false;
-  }
-  else {
-    hideMagyar();
-    hideTortenelem();
-    hideTrening();
-    hideForm();
-//    scrollLock.enablePageScroll();
-    isModal = false;
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= headerAppear || document.documentElement.scrollTop >= headerAppear) {
+    myHeader.classList.add("fla-header-show");
+    heroBg.style.opacity = '0';
+    heroText.classList.add("fla-hero-hide");
+  } else {
+    myHeader.classList.remove("fla-header-show");
+    heroBg.style.opacity = '1';
+    heroText.classList.remove("fla-hero-hide");
   }
 };
 
@@ -186,6 +58,17 @@ const swiper = new Swiper('.swiper', {
 
         lax.addDriver('scrollY', function () {
           return window.scrollY
+        })
+        lax.addElements("#fla-down-button", {
+          scrollY: {
+            opacity: [
+              [0, 200],
+              [1, 0],
+              {
+                easing: 'easeInQuad',
+              }
+            ],
+          }
         })
         lax.addElements("#segitunk", {
           scrollY: {
